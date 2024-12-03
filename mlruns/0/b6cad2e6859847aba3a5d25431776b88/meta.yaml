@@ -1,0 +1,15 @@
+artifact_uri: file:///d:/projects/Kidney-Disease-Classification-Deep-Learning-Project/mlruns/0/b6cad2e6859847aba3a5d25431776b88/artifacts
+end_time: 1733030877987
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: b6cad2e6859847aba3a5d25431776b88
+run_name: painted-hen-424
+run_uuid: b6cad2e6859847aba3a5d25431776b88
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1733030855744
+status: 3
+tags: []
+user_id: rohitdhotare2001

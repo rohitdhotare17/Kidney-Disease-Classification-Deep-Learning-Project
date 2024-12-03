@@ -1,0 +1,15 @@
+artifact_uri: file:///d:/projects/Kidney-Disease-Classification-Deep-Learning-Project/mlruns/0/6fac19900c154f4eb957a24ebce2a64f/artifacts
+end_time: 1733027272648
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 6fac19900c154f4eb957a24ebce2a64f
+run_name: blushing-finch-844
+run_uuid: 6fac19900c154f4eb957a24ebce2a64f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1733027245173
+status: 4
+tags: []
+user_id: rohit

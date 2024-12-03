@@ -1,0 +1,15 @@
+artifact_uri: file:///d:/projects/Kidney-Disease-Classification-Deep-Learning-Project/mlruns/0/eec540ba92824d61af27f5a07413cf7d/artifacts
+end_time: 1733027549110
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: eec540ba92824d61af27f5a07413cf7d
+run_name: monumental-cod-538
+run_uuid: eec540ba92824d61af27f5a07413cf7d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1733027523731
+status: 4
+tags: []
+user_id: rohit
