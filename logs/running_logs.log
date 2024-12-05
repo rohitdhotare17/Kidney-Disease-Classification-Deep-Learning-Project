@@ -1035,3 +1035,543 @@ x==========x]
 [2024-12-03 14:57:52,231: INFO: stage_04_model_evaluation: >>>>>> stage Evaluation stage completed <<<<<<
 
 x==========x]
+[2024-12-03 19:40:55,831: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.4:8080]
+[2024-12-03 19:40:55,833: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-12-03 19:42:57,651: INFO: _internal: 127.0.0.1 - - [03/Dec/2024 19:42:57] "GET / HTTP/1.1" 200 -]
+[2024-12-03 19:43:19,180: INFO: _internal: 127.0.0.1 - - [03/Dec/2024 19:43:19] "GET / HTTP/1.1" 200 -]
+[2024-12-03 19:43:34,806: INFO: _internal: 127.0.0.1 - - [03/Dec/2024 19:43:34] "GET / HTTP/1.1" 200 -]
+[2024-12-03 19:43:42,800: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\flask_cors\extension.py", line 194, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ^^^^^^^^^^^^^^^^^^
+  File "D:\projects\Kidney-Disease-Classification-Deep-Learning-Project\app.py", line 44, in predictRoute
+    result = clApp.classifier.predict()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\projects\kidney-disease-classification-deep-learning-project\src\cnnClassifier\pipeline\prediction.py", line 16, in predict
+    model = load_model(os.path.join("model", "model.h5"))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\keras\saving\saving_api.py", line 212, in load_model
+    return legacy_sm_saving_lib.load_model(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\keras\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\keras\saving\legacy\save.py", line 230, in load_model
+    raise IOError(
+OSError: No file or directory found at model\model.h5
+[2024-12-03 19:43:42,823: INFO: _internal: 127.0.0.1 - - [03/Dec/2024 19:43:42] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2024-12-03 19:43:45,285: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\flask_cors\extension.py", line 194, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ^^^^^^^^^^^^^^^^^^
+  File "D:\projects\Kidney-Disease-Classification-Deep-Learning-Project\app.py", line 44, in predictRoute
+    result = clApp.classifier.predict()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\projects\kidney-disease-classification-deep-learning-project\src\cnnClassifier\pipeline\prediction.py", line 16, in predict
+    model = load_model(os.path.join("model", "model.h5"))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\keras\saving\saving_api.py", line 212, in load_model
+    return legacy_sm_saving_lib.load_model(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\keras\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\keras\saving\legacy\save.py", line 230, in load_model
+    raise IOError(
+OSError: No file or directory found at model\model.h5
+[2024-12-03 19:43:45,295: INFO: _internal: 127.0.0.1 - - [03/Dec/2024 19:43:45] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2024-12-03 19:44:43,752: INFO: _internal: 127.0.0.1 - - [03/Dec/2024 19:44:43] "GET / HTTP/1.1" 200 -]
+[2024-12-03 19:45:14,301: INFO: _internal: 127.0.0.1 - - [03/Dec/2024 19:45:14] "GET / HTTP/1.1" 200 -]
+[2024-12-03 19:49:49,849: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.4:8080]
+[2024-12-03 19:49:49,850: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-12-03 19:50:09,406: INFO: _internal: 127.0.0.1 - - [03/Dec/2024 19:50:09] "GET / HTTP/1.1" 200 -]
+[2024-12-03 19:51:27,245: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.4:8080]
+[2024-12-03 19:51:27,248: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-12-03 19:52:05,953: INFO: _internal: 127.0.0.1 - - [03/Dec/2024 19:52:05] "GET / HTTP/1.1" 200 -]
+[2024-12-03 19:53:39,081: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.4:8080]
+[2024-12-03 19:53:39,083: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-12-03 19:54:16,990: INFO: _internal: 127.0.0.1 - - [03/Dec/2024 19:54:16] "GET / HTTP/1.1" 200 -]
+[2024-12-03 19:54:31,862: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\flask_cors\extension.py", line 194, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ^^^^^^^^^^^^^^^^^^
+  File "D:\projects\Kidney-Disease-Classification-Deep-Learning-Project\app.py", line 44, in predictRoute
+    result = clApp.classifier.predict()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\projects\kidney-disease-classification-deep-learning-project\src\cnnClassifier\pipeline\prediction.py", line 16, in predict
+    model = load_model(os.path.join("model", "model.h5"))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\keras\saving\saving_api.py", line 212, in load_model
+    return legacy_sm_saving_lib.load_model(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\keras\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\keras\saving\legacy\save.py", line 230, in load_model
+    raise IOError(
+OSError: No file or directory found at model\model.h5
+[2024-12-03 19:54:31,876: INFO: _internal: 127.0.0.1 - - [03/Dec/2024 19:54:31] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2024-12-04 10:55:37,937: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.4:8080]
+[2024-12-04 10:55:37,939: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-12-04 10:56:00,079: INFO: _internal: 127.0.0.1 - - [04/Dec/2024 10:56:00] "GET / HTTP/1.1" 200 -]
+[2024-12-04 10:56:46,656: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\flask_cors\extension.py", line 194, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ^^^^^^^^^^^^^^^^^^
+  File "D:\projects\Kidney-Disease-Classification-Deep-Learning-Project\app.py", line 44, in predictRoute
+    result = clApp.classifier.predict()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\projects\kidney-disease-classification-deep-learning-project\src\cnnClassifier\pipeline\prediction.py", line 16, in predict
+    model = load_model(os.path.join("model", "model.h5"))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\keras\saving\saving_api.py", line 212, in load_model
+    return legacy_sm_saving_lib.load_model(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\keras\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\keras\saving\legacy\save.py", line 230, in load_model
+    raise IOError(
+OSError: No file or directory found at model\model.h5
+[2024-12-04 10:56:46,695: INFO: _internal: 127.0.0.1 - - [04/Dec/2024 10:56:46] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2024-12-04 10:59:02,196: INFO: _internal: 127.0.0.1 - - [04/Dec/2024 10:59:02] "GET / HTTP/1.1" 200 -]
+[2024-12-04 10:59:16,909: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\flask_cors\extension.py", line 194, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ^^^^^^^^^^^^^^^^^^
+  File "D:\projects\Kidney-Disease-Classification-Deep-Learning-Project\app.py", line 44, in predictRoute
+    result = clApp.classifier.predict()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\projects\kidney-disease-classification-deep-learning-project\src\cnnClassifier\pipeline\prediction.py", line 16, in predict
+    model = load_model(os.path.join("model", "model.h5"))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\keras\saving\saving_api.py", line 212, in load_model
+    return legacy_sm_saving_lib.load_model(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\keras\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\keras\saving\legacy\save.py", line 230, in load_model
+    raise IOError(
+OSError: No file or directory found at model\model.h5
+[2024-12-04 10:59:16,919: INFO: _internal: 127.0.0.1 - - [04/Dec/2024 10:59:16] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2024-12-04 11:29:26,613: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.4:8080]
+[2024-12-04 11:29:26,615: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-12-04 11:30:05,443: INFO: _internal: 127.0.0.1 - - [04/Dec/2024 11:30:05] "GET / HTTP/1.1" 200 -]
+[2024-12-04 11:31:01,500: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\flask_cors\extension.py", line 194, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ^^^^^^^^^^^^^^^^^^
+  File "D:\projects\Kidney-Disease-Classification-Deep-Learning-Project\app.py", line 44, in predictRoute
+    result = clApp.classifier.predict()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\projects\kidney-disease-classification-deep-learning-project\src\cnnClassifier\pipeline\prediction.py", line 16, in predict
+    model = load_model(os.path.join("model", "model.h5"))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\keras\saving\saving_api.py", line 212, in load_model
+    return legacy_sm_saving_lib.load_model(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\keras\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\keras\saving\legacy\save.py", line 230, in load_model
+    raise IOError(
+OSError: No file or directory found at model\model.h5
+[2024-12-04 11:31:01,507: INFO: _internal: 127.0.0.1 - - [04/Dec/2024 11:31:01] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2024-12-04 11:57:42,989: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.4:8080]
+[2024-12-04 11:57:42,990: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-12-04 11:58:51,068: INFO: _internal: 127.0.0.1 - - [04/Dec/2024 11:58:51] "GET / HTTP/1.1" 200 -]
+[2024-12-04 11:59:42,480: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\flask_cors\extension.py", line 194, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ^^^^^^^^^^^^^^^^^^
+  File "D:\projects\Kidney-Disease-Classification-Deep-Learning-Project\app.py", line 44, in predictRoute
+    result = clApp.classifier.predict()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\projects\kidney-disease-classification-deep-learning-project\src\cnnClassifier\pipeline\prediction.py", line 16, in predict
+    model = load_model(os.path.join("model", "model.h5"))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\keras\saving\saving_api.py", line 212, in load_model
+    return legacy_sm_saving_lib.load_model(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\keras\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\keras\saving\legacy\save.py", line 230, in load_model
+    raise IOError(
+OSError: No file or directory found at model\model.h5
+[2024-12-04 11:59:42,489: INFO: _internal: 127.0.0.1 - - [04/Dec/2024 11:59:42] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2024-12-04 12:10:04,812: INFO: _internal: 127.0.0.1 - - [04/Dec/2024 12:10:04] "GET / HTTP/1.1" 200 -]
+[2024-12-04 12:10:14,730: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\flask_cors\extension.py", line 194, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ^^^^^^^^^^^^^^^^^^
+  File "D:\projects\Kidney-Disease-Classification-Deep-Learning-Project\app.py", line 44, in predictRoute
+    def trainRoute():
+                 ^^^^^
+  File "d:\projects\kidney-disease-classification-deep-learning-project\src\cnnClassifier\pipeline\prediction.py", line 16, in predict
+    model = load_model(os.path.join("model", "model.h5"))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\keras\saving\saving_api.py", line 212, in load_model
+    return legacy_sm_saving_lib.load_model(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\keras\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\keras\saving\legacy\save.py", line 230, in load_model
+    raise IOError(
+OSError: No file or directory found at model\model.h5
+[2024-12-04 12:10:14,781: INFO: _internal: 127.0.0.1 - - [04/Dec/2024 12:10:14] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2024-12-04 18:27:15,222: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.5:8080]
+[2024-12-04 18:27:15,224: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-12-04 18:27:23,417: INFO: _internal: 127.0.0.1 - - [04/Dec/2024 18:27:23] "GET / HTTP/1.1" 200 -]
+[2024-12-04 18:27:32,236: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\flask_cors\extension.py", line 194, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ^^^^^^^^^^^^^^^^^^
+  File "D:\projects\Kidney-Disease-Classification-Deep-Learning-Project\app.py", line 46, in predictRoute
+    result = clApp.classifier.predict()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\projects\kidney-disease-classification-deep-learning-project\src\cnnClassifier\pipeline\prediction.py", line 13, in predict
+    model = load_model(os.path.join("model", "model.h5"))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\keras\saving\saving_api.py", line 212, in load_model
+    return legacy_sm_saving_lib.load_model(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\keras\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\keras\saving\legacy\save.py", line 230, in load_model
+    raise IOError(
+OSError: No file or directory found at model\model.h5
+[2024-12-04 18:27:32,258: INFO: _internal: 127.0.0.1 - - [04/Dec/2024 18:27:32] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2024-12-04 18:39:52,937: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.5:8080]
+[2024-12-04 18:39:52,937: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-12-04 18:40:02,206: INFO: _internal: 127.0.0.1 - - [04/Dec/2024 18:40:02] "GET / HTTP/1.1" 200 -]
+[2024-12-04 18:40:11,365: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\flask_cors\extension.py", line 194, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ^^^^^^^^^^^^^^^^^^
+  File "D:\projects\Kidney-Disease-Classification-Deep-Learning-Project\app.py", line 46, in predictRoute
+    result = clApp.classifier.predict()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\projects\kidney-disease-classification-deep-learning-project\src\cnnClassifier\pipeline\prediction.py", line 15, in predict
+    model = load_model(os.path.join("model", "model.h5"))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\keras\saving\saving_api.py", line 212, in load_model
+    return legacy_sm_saving_lib.load_model(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\keras\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\keras\saving\legacy\save.py", line 230, in load_model
+    raise IOError(
+OSError: No file or directory found at model\model.h5
+[2024-12-04 18:40:11,402: INFO: _internal: 127.0.0.1 - - [04/Dec/2024 18:40:11] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2024-12-04 18:49:22,502: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.5:8080]
+[2024-12-04 18:49:22,503: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-12-04 18:49:28,838: INFO: _internal: 127.0.0.1 - - [04/Dec/2024 18:49:28] "GET / HTTP/1.1" 200 -]
+[2024-12-04 18:49:35,809: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\flask_cors\extension.py", line 194, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ^^^^^^^^^^^^^^^^^^
+  File "D:\projects\Kidney-Disease-Classification-Deep-Learning-Project\app.py", line 46, in predictRoute
+    result = clApp.classifier.predict()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\projects\kidney-disease-classification-deep-learning-project\src\cnnClassifier\pipeline\prediction.py", line 14, in predict
+    model = load_model(os.path.join("model", "model.h5"))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\keras\saving\saving_api.py", line 212, in load_model
+    return legacy_sm_saving_lib.load_model(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\keras\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\keras\saving\legacy\save.py", line 230, in load_model
+    raise IOError(
+OSError: No file or directory found at model\model.h5
+[2024-12-04 18:49:35,825: INFO: _internal: 127.0.0.1 - - [04/Dec/2024 18:49:35] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2024-12-04 19:19:10,668: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.5:8080]
+[2024-12-04 19:19:10,670: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-12-04 19:19:29,901: INFO: _internal: 192.168.1.5 - - [04/Dec/2024 19:19:29] "GET / HTTP/1.1" 200 -]
+[2024-12-04 19:19:38,096: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\flask_cors\extension.py", line 194, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ^^^^^^^^^^^^^^^^^^
+  File "D:\projects\Kidney-Disease-Classification-Deep-Learning-Project\app.py", line 46, in predictRoute
+    result = clApp.classifier.predict()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\projects\kidney-disease-classification-deep-learning-project\src\cnnClassifier\pipeline\prediction.py", line 14, in predict
+    raise FileNotFoundError(f"Model file not found at {model_path}. Please ensure the model is saved correctly.")
+FileNotFoundError: Model file not found at model\model.h5. Please ensure the model is saved correctly.
+[2024-12-04 19:19:38,111: INFO: _internal: 192.168.1.5 - - [04/Dec/2024 19:19:38] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2024-12-05 11:33:09,159: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.5:8080]
+[2024-12-05 11:33:09,161: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-12-05 11:33:14,997: INFO: _internal: 127.0.0.1 - - [05/Dec/2024 11:33:14] "GET / HTTP/1.1" 200 -]
+[2024-12-05 11:33:27,990: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\flask_cors\extension.py", line 194, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\envs\kidney\Lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ^^^^^^^^^^^^^^^^^^
+  File "D:\projects\Kidney-Disease-Classification-Deep-Learning-Project\app.py", line 46, in predictRoute
+    result = clApp.classifier.predict()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\projects\kidney-disease-classification-deep-learning-project\src\cnnClassifier\pipeline\prediction.py", line 17, in predict
+    test_image = image.load_img(imagename, target_size = (224,224))
+                 ^^^^^^^^^^^^^^
+AttributeError: module 'keras.preprocessing.image' has no attribute 'load_img'
+[2024-12-05 11:33:28,009: INFO: _internal: 127.0.0.1 - - [05/Dec/2024 11:33:28] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2024-12-05 11:40:06,477: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.5:8080]
+[2024-12-05 11:40:06,480: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-12-05 11:40:10,989: INFO: _internal: 127.0.0.1 - - [05/Dec/2024 11:40:10] "GET / HTTP/1.1" 200 -]
+[2024-12-05 11:40:22,747: INFO: _internal: 127.0.0.1 - - [05/Dec/2024 11:40:22] "POST /predict HTTP/1.1" 200 -]
+[2024-12-05 11:40:51,400: INFO: _internal: 127.0.0.1 - - [05/Dec/2024 11:40:51] "POST /predict HTTP/1.1" 200 -]
+[2024-12-05 11:41:57,593: INFO: _internal: 127.0.0.1 - - [05/Dec/2024 11:41:57] "POST /predict HTTP/1.1" 200 -]
+[2024-12-05 11:43:52,519: INFO: _internal: 127.0.0.1 - - [05/Dec/2024 11:43:52] "POST /predict HTTP/1.1" 200 -]
+[2024-12-05 11:47:02,393: WARNING: polymorphic_function: 5 out of the last 5 calls to <function Model.make_predict_function.<locals>.predict_function at 0x00000229C2E0E700> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.]
+[2024-12-05 11:47:02,402: INFO: _internal: 127.0.0.1 - - [05/Dec/2024 11:47:02] "POST /predict HTTP/1.1" 200 -]
+[2024-12-05 11:56:05,954: INFO: _internal: 127.0.0.1 - - [05/Dec/2024 11:56:05] "GET / HTTP/1.1" 200 -]
+[2024-12-05 11:56:46,963: INFO: _internal: 127.0.0.1 - - [05/Dec/2024 11:56:46] "GET / HTTP/1.1" 200 -]
+[2024-12-05 11:56:48,023: INFO: _internal: 127.0.0.1 - - [05/Dec/2024 11:56:48] "GET / HTTP/1.1" 200 -]
+[2024-12-05 11:56:49,053: INFO: _internal: 127.0.0.1 - - [05/Dec/2024 11:56:49] "GET / HTTP/1.1" 200 -]
+[2024-12-05 11:58:15,372: INFO: _internal: 127.0.0.1 - - [05/Dec/2024 11:58:15] "GET / HTTP/1.1" 200 -]
+[2024-12-05 11:58:50,733: INFO: _internal: 127.0.0.1 - - [05/Dec/2024 11:58:50] "GET / HTTP/1.1" 200 -]
+[2024-12-05 12:04:39,414: INFO: _internal: 127.0.0.1 - - [05/Dec/2024 12:04:39] "GET / HTTP/1.1" 200 -]
+[2024-12-05 12:05:12,636: WARNING: polymorphic_function: 6 out of the last 6 calls to <function Model.make_predict_function.<locals>.predict_function at 0x00000229C4F56160> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.]
+[2024-12-05 12:05:12,644: INFO: _internal: 127.0.0.1 - - [05/Dec/2024 12:05:12] "POST /predict HTTP/1.1" 200 -]
+[2024-12-05 12:26:13,176: INFO: _internal: 127.0.0.1 - - [05/Dec/2024 12:26:13] "POST /predict HTTP/1.1" 200 -]
