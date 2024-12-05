@@ -1575,3 +1575,10 @@ AttributeError: module 'keras.preprocessing.image' has no attribute 'load_img'
 [2024-12-05 12:05:12,636: WARNING: polymorphic_function: 6 out of the last 6 calls to <function Model.make_predict_function.<locals>.predict_function at 0x00000229C4F56160> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.]
 [2024-12-05 12:05:12,644: INFO: _internal: 127.0.0.1 - - [05/Dec/2024 12:05:12] "POST /predict HTTP/1.1" 200 -]
 [2024-12-05 12:26:13,176: INFO: _internal: 127.0.0.1 - - [05/Dec/2024 12:26:13] "POST /predict HTTP/1.1" 200 -]
+[2024-12-05 14:39:19,750: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.1.5:8080]
+[2024-12-05 14:39:19,753: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-12-05 14:39:25,514: INFO: _internal: 127.0.0.1 - - [05/Dec/2024 14:39:25] "GET / HTTP/1.1" 200 -]
+[2024-12-05 14:39:43,319: INFO: _internal: 127.0.0.1 - - [05/Dec/2024 14:39:43] "POST /predict HTTP/1.1" 200 -]
