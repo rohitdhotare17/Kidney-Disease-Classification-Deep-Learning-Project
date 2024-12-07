@@ -36,6 +36,8 @@ def trainRoute():
     # os.system("dvc repro")
     return "Training done successfully!"
 
+# ok
+
 
 
 @app.route("/predict", methods=['POST'])
